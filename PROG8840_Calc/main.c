@@ -16,18 +16,24 @@ void main() {
 	int inputNum;
 
 	printf("Enter operation number: ");
-	scanf_s("%1o", &inputNum);
+	scanf_s("%d", &inputNum);
 
 	switch (inputNum)
 	{
 	case 1:
 		add();
+		break;
 	case 2:
 		subtract();
+		break;
 	case 3:
 		multiply();
+		break;
+	default:
+		printf("Invalid operation number.\n");
+		break;
 	}
-
+	return 0;
 }
 
 void printWelcomeMenu() {
@@ -50,24 +56,26 @@ void add() {
 	printf("Enter the second value:");
 	scanf_s("%lf", &num2);
 	result = num1 + num2;
-	printf("%lf + %lf = %lf\n", num1, num2, result);
+	printf("%lf + %lf = %lf(Addition)\n", num1, num2, result);
 }
 
 void subtract() {
-	int num1, num2;
-
-	num1 = 0;
-	num2 = 42;
-
-	int result = num2 - num1;
+	double num1, num2, result;
+	printf("Enter the first value:");
+	scanf_s("%lf", &num1);
+	printf("Enter the second value:");
+	scanf_s("%lf", &num2);
+	result = num1 - num2;
+	printf("%lf - %lf = %lf(Subtraction)\n", num1, num2, result);
 }
 
 void multiply() {
-	int num1, num2;
-
-	num1 = 0;
-	num2 = 42;
-
-	int result = num2 - num1;
+	double num1, num2, result;
+	printf("Enter the first value:");
+	scanf_s("%lf", &num1);
+	printf("Enter the second value:");
+	scanf_s("%lf", &num2);
+	result = num1 * num2;
+	printf("%lf * %lf = %lf(Multiplication)\n", num1, num2, result);
 }
 
